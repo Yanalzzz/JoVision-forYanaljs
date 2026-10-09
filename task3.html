@@ -21,23 +21,16 @@
         let even_arr = arr.filter((num) => {
             return num % 2 == 0;
         });
-
         const button = document.getElementById("clickBtn");
-
         button.addEventListener("click", () => {
-
             let arr1 = 0;
-
             for (let i = 1; i < even_arr.length; i++) {
                 arr1 = arr1 + even_arr[i];
             }
-
             document.body.innerHTML =
                 even_arr + "<br>" +
                 "The sum of these numbers: " + arr1;
         });
-
     </script>
-
 </body>
 </html>
