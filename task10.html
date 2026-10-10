@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<button id="getIpBtn">Get ip</button>
+
+<style>
+#getIpBtn {
+    background-color:rgb(30, 0, 255);
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+#getIpBtn:hover {
+    background-color: green;
+    transform: scale(1.1);
+}
+</style>
+
+    <button id = "getIpBtn">  Git ip  </button>
+<script>
+
+const button = document.getElementById("getIpBtn");
+document.addEventListener("click",()=>{
+ fetch("https://api.ipify.org/").then(response => response.text())
+                .then(data => {
+                    console.log(data);
+                 button.innerHTML = data ;
+
+        });
+
+});
+</script>
+
+
+
+</body>
+</html>
