@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button id="clickBtn1">Click 1</button>
+    <button id="clickBtn2">Click 2</button>
+    <button id="clickBtn3">Click 3</button>
+    <button id="clickBtn4">Click 4</button>
+    <button id="clickBtn5">Click 5</button>
+<script>
+let arr = [];
+ for (let i = 1; i <= 100; i++) {
+            arr[i] = i;
+        }
+
+
+const button1 = document.getElementById("clickBtn1");
+const button2 = document.getElementById("clickBtn2");
+const button3 = document.getElementById("clickBtn3");
+const button4 = document.getElementById("clickBtn4");
+const button5 = document.getElementById("clickBtn5");
+
+button1.addEventListener("click",()=>{
+let notdi3 = arr.filter((num)=>{return num%3!=0  });
+console.log(notdi3);
+});
+button2.addEventListener("click",()=>{
+  
+for(let i =101 ; i <=150 ; i++ ){
+
+   arr= arr.concat(i);  
+}
+console.log(arr);
+
+});
+button3.addEventListener("click",()=>{
+ let arr3 = arr.map((num) => { return num + 3;
+    });
+
+console.log(arr3);
+
+});
+button4.addEventListener("click",()=>{
+    arr4 = arr.slice(20,41);
+console.log(arr4);
+
+});
+button5.addEventListener("click", ()=>{
+
+
+ function shuffleArray(arr) {
+    for (let i = arr.length - 1; i > 0; i--) {
+          let j = Math.floor(Math.random() * (i + 1));
+            [arr[i], arr[j]] = [arr[j], arr[i]];
+        }
+    
+return arr
+    }
+    console.log(shuffleArray(arr));
+    console.log(arr.sort((a,b) =>b-a));
+});
+</script>
+
+</body>
+</html>
