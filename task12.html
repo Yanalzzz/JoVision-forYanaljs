@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<input type="text" id ='name' placeholder="Name" >
+<input type="text" id ='age' placeholder="Age" >
+<button id = "submit"> abdullah </button>
+<button id="demo" >   time press </button>
+<script>
+
+
+const button= document.getElementById("submit");
+
+button.addEventListener('click',()=>{
+
+
+ const date = new Date();
+
+    document.getElementById("demo").innerHTML =
+        date.toLocaleTimeString();
+
+const name = document.getElementById("name").value;
+const age = document.getElementById("age").value;
+const time = date.toLocaleTimeString();
+ 
+const person = {
+  "name": name,
+  "age": age ,
+  "press time" : date
+};
+
+console.log(person);
+alert(`Your name is: ${name},\n your age is: ${age},\ntime press is :${date}`);
+
+});
+
+
+
+</script>
+
+</body>
+</html>
