@@ -10,20 +10,19 @@
     <button id = "getIpBtn">  Git ip  </button>
 
 <script>
-try {
+
     const button = document.getElementById("getIpBtn");
+
     button.addEventListener("click", async () => {
-        fetch("https://api.ipify.orgx/")
-            .then(response => response.text())
-            .then(data => {
-                console.log(data);
-                button.innerHTML = data;
-            });
+        try {
+            const response = await fetch("https://api.ipify.orgx");
+            const data = await response.text();
+            console.log(data);
+            button.innerHTML = data;
+        } catch (err) {
+            alert(err.message);
+        }
     });
-} catch (err) {
-    
-    alert(err.message);
-}
 </script>
 
 </body>
